@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <h1>Hi</h1>
+    <p>Would you like to login or sign up?</p>
+    <button onclick="test()" id="login">Login</button>
+    <a href="/signup"><button id="signup">SignUp</button></a>
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  function test(){
+    socket.emit("test");
+  }
+</script>
+</html>
